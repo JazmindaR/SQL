@@ -1,0 +1,25 @@
+-- Create a Clothingstore Database
+
+CREATE TABLE clothingstore (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, quantity INTEGER, sold INTEGER);
+
+INSERT INTO clothingstore VALUES (1, "shirts", 10.00, 30, 23);
+INSERT INTO clothingstore VALUES (2, "pants", 30.00, 45, 38);
+INSERT INTO clothingstore VALUES (3, "shorts", 15.00, 42, 36);
+INSERT INTO clothingstore VALUES (4, "socks", 8.00, 25, 20);
+INSERT INTO clothingstore VALUES (5, "hats", 25.00, 52, 48);
+INSERT INTO clothingstore VALUES (6, "boxers",12.00, 32, 30);
+INSERT INTO clothingstore VALUES (7, "underwears", 13.00, 34, 28);
+INSERT INTO clothingstore VALUES (8, "bras", 14.00, 34, 26);
+INSERT INTO clothingstore VALUES (9, "gloves", 12.00, 28, 24);
+INSERT INTO clothingstore VALUES (10, "scarves", 8.00, 43, 32);
+INSERT INTO clothingstore VALUES (11, "sweaters", 20.00, 52, 46);
+INSERT INTO clothingstore VALUES (12, "jackets", 22.00, 63, 60);
+INSERT INTO clothingstore VALUES (13, "coats", 50.00, 70 ,68);
+INSERT INTO clothingstore VALUES (14, "suit", 68.00, 55, 52);
+INSERT INTO clothingstore VALUES (15, "dresses", 45.00, 65, 63);
+
+-- Display the database ordered by price.
+SELECT * FROM clothingstore WHERE (price) >=8 ORDER BY price;
+
+-- How many items were sold?
+SELECT sum(sold) FROM clothingstore;
